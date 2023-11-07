@@ -1,11 +1,13 @@
+yes | sudo apt install zip
+
 # ===== Zsh ====
 # Link zsh
 rm $HOME/.zshrc
-ln -s $HOME/dotfiles-tensordock/config/zshrc $HOME/.zshrc
+ln -s $HOME/gpu_cloud/config/zshrc $HOME/.zshrc
 
 rm -rf $HOME/.zsh
 mkdir -p $HOME/.zsh
-ln -s $HOME/dotfiles-tensordock/config/aliases.zsh $HOME/.zsh/aliases.zsh
+ln -s $HOME/gpu_cloud/config/aliases.zsh $HOME/.zsh/aliases.zsh
 
 # Change shell to zsh
 yes | sudo chsh -s $(which zsh)
@@ -25,8 +27,8 @@ yes | ~/.fzf/install
 rm $HOME/.pdbrc.py
 rm $HOME/.pdbrc
 
-ln -s $HOME/dotfiles-tensordock/config/pdbrc.py $HOME/.pdbrc.py
-ln -s $HOME/dotfiles-tensordock/config/pdbrc $HOME/.pdbrc
+ln -s $HOME/gpu_cloud/config/pdbrc.py $HOME/.pdbrc.py
+ln -s $HOME/gpu_cloud/config/pdbrc $HOME/.pdbrc
 
 # ======== Nvtop ======
 # https://github.com/Syllo/nvtop/issues/51#issuecomment-759600674
@@ -47,4 +49,4 @@ git clone https://github.com/megvii-research/expman $HOME/.expman
 echo '[[ -o interactive ]] && source $HOME/.expman/expman.zsh' >> ~/.zshrc
 
 # ======= vscode extension ==========
-# ln -s $HOME/dotfiles-tensordock/config/vscode-server/extensions $HOME/.vscode-server/extensions
+# ln -s $HOME/gpu_cloud/config/vscode-server/extensions $HOME/.vscode-server/extensions
